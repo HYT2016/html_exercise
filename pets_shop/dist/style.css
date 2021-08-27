@@ -1,31 +1,22 @@
 @charset "UTF-8";
 * {
+  font-family: 微軟正黑體;
+  color: #f3f7f7;
+  transition-duration: 1s;
   position: relative;
 }
 
 html, body {
+  width: 100%;
+  height: 100%;
   padding: 0px;
   margin: 0px;
-  border-bottom: solid 80px #333;
-  box-sizing: border-box;
 }
 
 .max_width {
   max-width: 768px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.header {
-  height: 300px;
-  background-color: #27232f;
-}
-.header .icon {
-  width: 150px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
 }
 
 .content {
@@ -62,9 +53,17 @@ html, body {
   color: #f3f7f7;
   font-weight: 500;
 }
+.content .button_blue:hover {
+  background-color: #f24;
+  color: #333;
+}
 .content .button_yellow {
   background-color: #ffb336;
   color: #27232f;
+}
+.content .button_yellow:hover {
+  background-color: #f24;
+  color: #333;
 }
 .content .commodity {
   display: inline-block;
@@ -98,4 +97,9 @@ html, body {
 }
 .content_gray .button {
   border-color: #f3f7f7;
+  cursor: pointer;
+}
+
+.product_name {
+  cursor: pointer;
 }

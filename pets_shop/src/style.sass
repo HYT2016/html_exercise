@@ -2,6 +2,7 @@ $color_yellow: #ffb336
 $color_blue: #27232f
 $color_white: #f3f7f7
 $color_gray: #333
+$color_red: #f24
 
 $font_base_size: 10px
 
@@ -9,15 +10,22 @@ $max_content_width: 768px
 
 *
   // border: solid 1px black
+  font-family: 微軟正黑體
+  color: $color_white
+  transition-duration: 1s
   position: relative
+  
 
 @mixin size($w, $h)
   width: $w
   height: $h
   
 html, body
+  width: 100%
+  height: 100%
   padding: 0px
   margin: 0px
+  // border-bottom: solid 20px $color_gray
 
   
 .max_width
@@ -25,15 +33,15 @@ html, body
   margin-left: auto
   margin-right: auto
   
-.header
-  height: 300px
-  background-color: $color_blue
-  & .icon
-    width: 150px
-    position: absolute
-    left: 50%
-    top: 50%
-    transform: translateX(-50%) translateY(-50%)
+// .header
+//   height: 300px
+//   background-color: $color_blue
+//   & .icon
+//     width: 150px
+//     position: absolute
+//     left: 50%
+//     top: 50%
+//     transform: translateX(-50%) translateY(-50%)
   
 .content
   font-family: 微軟正黑體
@@ -67,10 +75,16 @@ html, body
     background-color: $color_blue
     color: $color_white
     font-weight: 500
+    &:hover
+      background-color: $color_red
+      color: #333
+    
   & .button_yellow
     background-color: $color_yellow
     color: $color_blue
-  
+    &:hover
+      background-color: $color_red
+      color: #333
     
   & .commodity
     display: inline-block
@@ -103,4 +117,8 @@ html, body
     font-weight: 500
   & .button
     border-color: $color_white
+    cursor: pointer
     
+    
+.product_name
+  cursor: pointer
